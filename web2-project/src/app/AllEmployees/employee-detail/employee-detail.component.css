@@ -1,0 +1,25 @@
+.details{
+    border: 1px solid gray;
+    border-radius: 9px;
+    padding: 5px;
+    margin-top: 5%;
+    min-width:350px;
+    box-shadow:7px 5px 10px 5px gray;
+    padding: 20px;
+}
+.details input{
+    margin-right:30px;
+    padding: 4px;
+    color: darkblue;
+    margin-left: 10%;
+
+}
+.line{
+    font-size: large;
+    border-bottom: 1px solid gray;
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+
+

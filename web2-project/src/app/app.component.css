@@ -1,0 +1,23 @@
+/* AppComponent's private CSS styles */
+.b{
+  background-color: rgb(83, 78, 78,0.8);
+  height: 100%;
+}
+
+h1 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+nav ul a{
+color:whitesmoke;
+}
+nav ul a:hover{
+  color:darkturquoise;
+}

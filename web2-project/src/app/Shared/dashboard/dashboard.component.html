@@ -1,0 +1,65 @@
+
+
+
+
+<div class="container pt-4">
+  <div class="row justify-content-md-center">
+    <div class="col">
+      <div class="card text-white border-dark">
+      <div class="card-header bg-dark">
+        <h6>The Tasks</h6>
+      </div>
+      <!--<ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-action" *ngFor="let task of tasks"
+          [class.selected]="task === selectedTask"
+          (click)="onSelect(task)">
+        <a routerLink="/detail/{{task.id}}">
+          <span class="badge">{{task.id}}</span> <span>{{task.name}}</span>
+        </a>
+        </li>
+      </ul>-->
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-action bg-secondary text-white border-dark"
+           *ngFor="let task of tasks">
+            <span class="badge bg-dark">{{task.id}}</span><span>  {{task.name}}</span>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+    <div class="card text-white border-dark">
+      <div class="card-header bg-dark">
+        <h6>The Departments</h6>
+      </div>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-action bg-secondary text-white border-dark"
+            *ngFor="let department of departments"> 
+           <span class="badge bg-dark">{{department.id}}</span><span>  {{department.name}}</span>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card text-white border-dark">
+      <div class="card-header bg-dark">
+        <h6>The Employees</h6>
+      </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action bg-secondary text-white border-dark"
+            *ngFor="let employee of employees"> 
+           <span class="badge bg-dark">{{employee.id}}</span><span>  {{employee.first_name}}</span>
+        </li>
+          </ul>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="container-fluid">
+
+  <br><br>
+<app-calendar></app-calendar>
+</div>
+
+
+

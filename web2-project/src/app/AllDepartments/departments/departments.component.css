@@ -1,0 +1,142 @@
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  
+}
+
+.container {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  color: #405065;
+}
+
+.search-department {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
+}
+
+.form-control {
+  box-shadow: 0 10px 40px 0 #B0C1D9;
+}
+.form-control::placeholder  {
+  font-family: FontAwesome;
+}
+
+@media (max-width:700px){
+  .flex{
+      flex-direction: column;
+  }
+  .dash{
+      font-size: smaller;
+  }
+}
+.badge {
+    display: inline-block;
+    position: relative;
+    font-size: small;
+    color: black;
+    min-width: 17px;
+    padding : 12px;
+    background-color:gray;
+    line-height: 1em;
+    margin-right: .8em;
+    border-radius: 10px;
+    font-weight: bolder;
+    text-align: center;
+}
+.badgeDel{
+  float: right;
+  margin:5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:4px;
+}
+
+.departs{
+  margin-right: -10%;
+}
+.departs li{
+  list-style-type: none;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 15px;
+  
+
+}
+
+.departs li:hover{
+  font-size: large;
+  padding: 2px;
+  cursor:pointer;
+  transition: 0.5s;
+  background-color: grey;
+  filter: opacity(0.7);
+}
+
+.departs li.selected {
+background-color:gainsboro;
+transition: 0.5s;
+padding-right: 5px;
+}
+
+.message{
+  margin-right: 5%;
+}
+
+.addDept{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.dash{
+  height:100%;
+  width: 15%;
+  position: fixed;
+  left: 0;
+  float: left;
+  background-color:blanchedalmond;
+  filter :(opacity(0.7));
+  
+}
+
+.buttonDel{
+  margin-top: 2px;
+  font-weight: bold;
+  float: right;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: skyblue;
+  cursor: pointer;
+
+}
+
+.AddDept{
+  border: 1px solid gray;
+  height: 58%;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 5%;
+  
+}
+
+.succsesAdd{
+  text-align: center;
+  transition:color 1s;
+  background-color: grey;
+  color:yellow;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding :3px;
+}
+
+.tableline :hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.4s;
+
+
+}

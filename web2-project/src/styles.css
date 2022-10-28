@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@fullcalendar/core/main.css';
+@import '@fullcalendar/daygrid/main.css';
+
+html{
+    background-color: grey;
+    filter: 0.5;
+}
+.buttonS{
+    padding:5px;
+    margin-left: 5px;
+    border-radius:5px;
+    min-width: 100px;
+    color:white;
+    border: 1px solid gray;
+    background-color: darkblue;
+}
+
+.buttonS:hover{
+background-color:greenyellow;
+color: black;
+transition: 0.9s;
+}
+
+*{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

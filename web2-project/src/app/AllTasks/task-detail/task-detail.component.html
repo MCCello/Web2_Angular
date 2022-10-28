@@ -1,0 +1,122 @@
+
+<!-- Modal -->
+<div *ngIf="task" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title text-light" id="exampleModalLongTitle">{{task.name }} Details</h5>
+          <button (click)="depName=null"type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="bi bi-x-circle-fill text-warning" width="1.3em" height="1.2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-4.146-3.146a.5.5 0 00-.708-.708L8 7.293 4.854 4.146a.5.5 0 10-.708.708L7.293 8l-3.147 3.146a.5.5 0 00.708.708L8 8.707l3.146 3.147a.5.5 0 00.708-.708L8.707 8l3.147-3.146z" clip-rule="evenodd"/>
+            </svg></button> 
+        </div>
+  
+        
+  <!--MODAL BOOOOOOOOODY-->
+        <div class="modal-body"> 
+            <div class="alert alert-dark d-flex"><label>Task Name: <input [(ngModel)]="task.name" placeholder="name"> </label> </div>
+             <div *ngIf="task.employees.length; else nullEmp" class="alert alert-info d-flex "> <h5>Employees: {{task.employees}}</h5></div>
+             <ng-template #nullEmp><div class="alert alert-info d-flex "> <h5>Employees: No employees assigned</h5></div>
+             </ng-template>
+             <div class="alert alert-info d-flex "> <label>Due Date:<input [(ngModel)]="task.due_date" placeholder="YYYY-MM-DD"> </label></div>
+             
+             <button (click)="getTaskDepartmentName(task.department_id)">Show Department</button>
+             <div class="alert alert-primary d-flex "> <h5>Department: {{depName}} </h5></div>
+             
+  
+
+             <div *ngIf="task.employees; else nullEmp"></div>
+             <ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+
+
+
+
+              <div class="alert alert-primary">
+                <label for="inputState">Change department
+                <select [(ngModel)]="task.department_id">
+                  <option value="8">Software Engineering</option>
+                  <option value="9">Human Resources</option>
+                  <option value="10">Student Administration</option>
+                  <option value="11">ICT & Support</option>
+                </select>
+                </label>
+              </div>
+    
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" (click)="depName=null" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success"ng-init="count:boolean=false" (click)="update();"> Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="shadow p-4 mb-4 bg-white" *ngIf="task">
+  <h3 style="text-align: center;">Task ID:{{task.id}}</h3>
+    <div class="tasks">
+        
+        <p>ID: {{task.id}}</p>
+        <P>Description: {{task.name}}</P>
+        <P>Due Date: {{task.due_date}}</P>
+        <P>Assigned Department: {{depName}}</P>
+        <button (click)="getTaskDepartmentName(task.department_id)"> Click</button>
+        
+        <p>Assigned Employees: </p>
+        
+            <ul>
+                <li *ngFor="let string of task.employees">
+                    <span>{{string}} </span>
+                </li>
+            </ul>
+            
+
+            
+
+
+
+       
+        <label>Edit Description:
+            <input [(ngModel)]="task.name" placeholder="description"/>
+        </label> <br>
+        
+        <label>Edit Due Date:
+            <input [(ngModel)]="task.due_date" placeholder="yyyyMMdd"/>
+        </label> 
+        <button (click)="update()">Update Task</button>
+        <br>
+        <br>
+        <label>Assign Department: 
+            <input [(ngModel)]="task.department_id"/>
+        </label>
+        <br>
+
+        
+
+    </div>
+</div>
+
+
+
+

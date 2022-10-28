@@ -1,0 +1,16 @@
+.details{
+  border: 1px solid gray;
+  border-radius: 9px;
+  padding: 5px;
+  margin-top: 10%;
+  min-width:260px;
+  box-shadow:7px 5px 10px 5px gray;
+  padding: 15%;;
+}
+
+.line{
+  font-size: large;
+  border-bottom: 1px solid gray;
+  margin-left:5%;
+  margin-right: 5%;
+}

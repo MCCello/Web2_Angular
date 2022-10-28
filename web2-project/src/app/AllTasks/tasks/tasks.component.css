@@ -1,0 +1,139 @@
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: #405065;
+  }
+  
+  .search-task {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
+  
+
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  } 
+ 
+ .button{
+     color: black;
+     height: fit-content;
+     width: fit-content;
+ }
+ 
+
+ .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;   
+}
+
+@media (max-width:800px){
+    .flex{
+        flex-direction: column;
+    }
+    .dash{
+        font-size: smaller;
+    }
+}
+
+
+.badge {
+    display: inline-block;
+    position: relative;
+    font-size: small;
+    color: black;
+    min-width: 17px;
+    padding : 12px;
+    background-color:white;
+    line-height: 1em;
+    margin-right: .8em;
+    border-radius: 10px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.tasks{
+  min-width: 400px;
+    
+}
+.tasks li{
+    border: 1px solid gray;
+    border-radius: 14px;
+    list-style-type: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 15px;
+    padding: 3px ;
+}
+
+.tasks li:hover{
+    cursor:pointer;
+    transition: 0.5s;
+    background-color: black;
+    color:white;
+    filter: opacity(0.8);
+}
+
+.tasks li.selected {
+background-color:lightblue;
+transition: 0.5s;
+padding-right: 5px;
+filter: opacity(0.8);
+}
+
+.addTask{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dash{
+    height:100%;
+    width: 15%;
+    position: fixed;
+    left: 0;
+    float: left;
+    background-color:blanchedalmond;
+    filter :(opacity(0.7));
+}
+
+.buttonDel{
+    float: right;
+    margin-top: 5px;
+    border-radius:30px;
+    border: 1.5px solid gray;
+    background-color: red;
+    cursor: pointer;
+    filter: opacity(0.8);
+}
+
+.Addtask{
+    border: 1px solid gray;
+    height: 58%;
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 2%;
+}
+
+.succsesAdd{
+    text-align: center;
+    transition:color 1s;
+    background-color: grey;
+    color:skyblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding :4px;
+}
+
+
+.tableline :hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+
+}
+
+
+
